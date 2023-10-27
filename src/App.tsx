@@ -1,11 +1,12 @@
 import { Nav } from './Nav';
+import Home from './home page/Home';
 
 function App() {
   return (
     <>
       <Nav />
       <div className='m-8'>
-        <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+        <Home />
       </div>
     </>
   );
