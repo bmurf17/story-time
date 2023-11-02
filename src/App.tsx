@@ -4,18 +4,18 @@ import { routes } from './shared/Routes';
 
 function App() {
   return (
-    <>
+    <div>
       <BrowserRouter>
         <Nav />
-        <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 my-4 '>
+        <main className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-4 '>
           <Routes>
             {routes.map((route) => {
               return <Route path={route.route} element={route.component} key={route.name} />;
             })}
           </Routes>
-        </div>
+        </main>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

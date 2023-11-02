@@ -12,7 +12,7 @@ export default function Home() {
           title='The Coldest Sunset'
         />
       </div>
-      <div className='flex gap-4 overflow-auto'>
+      <div className='grid grid-flow-row auto-rows-max grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4'>
         <Card
           img='https://v1.tailwindcss.com/img/card-top.jpg'
           alt='Sunset in the mountains'
