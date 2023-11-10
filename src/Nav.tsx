@@ -9,7 +9,7 @@ export default function Nav() {
   const location = useLocation();
 
   return (
-    <Disclosure as='nav' className='bg-gray-800'>
+    <Disclosure as='nav' className='bg-gray-800 '>
       {({ open }) => (
         <>
           <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
@@ -37,18 +37,24 @@ export default function Nav() {
                 <div className='hidden sm:ml-6 sm:block'>
                   <div className='flex space-x-4'>
                     {routes.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.route}
-                        className={classNames(
-                          item.route === location.pathname
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                      <>
+                        {item.displayInNav ? (
+                          <Link
+                            key={item.name}
+                            to={item.route}
+                            className={classNames(
+                              item.route === location.pathname
+                                ? 'bg-gray-900 text-white'
+                                : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                              'rounded-md px-3 py-2 text-sm font-medium'
+                            )}
+                            aria-current={item.route === location.pathname ? 'page' : undefined}>
+                            {item.name}
+                          </Link>
+                        ) : (
+                          <></>
                         )}
-                        aria-current={item.route === location.pathname ? 'page' : undefined}>
-                        {item.name}
-                      </Link>
+                      </>
                     ))}
                   </div>
                 </div>

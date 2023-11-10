@@ -1,10 +1,11 @@
 import Home from '../home/Home';
-import Projects from '../projects/Projects';
+import Project from '../project/Projects';
 
 export interface Route {
   name: string;
   route: string;
   component: JSX.Element;
+  displayInNav: boolean;
 }
 
 export const routes: Route[] = [
@@ -12,10 +13,12 @@ export const routes: Route[] = [
     name: 'Home',
     route: '/',
     component: <Home />,
+    displayInNav: true,
   },
   {
     name: 'Projects',
-    route: '/projects',
-    component: <Projects />,
+    route: '/project',
+    component: <Project />,
+    displayInNav: false,
   },
 ];
