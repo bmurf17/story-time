@@ -1,9 +1,9 @@
-import Card from '../shared/Card';
+import ColumnHeader from './_ColumnHeader';
 
 export default function ActivityLog() {
   return (
-    <>
-      <Card title={'Activity Log'} description={'Continued Logs'} img={''} alt={''} />
-    </>
+    <div className='flex flex-col'>
+      <ColumnHeader columnTitle='Activity Log' />
+    </div>
   );
 }

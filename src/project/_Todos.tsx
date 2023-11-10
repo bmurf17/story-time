@@ -1,9 +1,9 @@
-import Card from '../shared/Card';
+import ColumnHeader from './_ColumnHeader';
 
 export default function Todos() {
   return (
-    <>
-      <Card title={'Todos'} description={'All logged Todos'} img={''} alt={''} />
-    </>
+    <div className='flex flex-col'>
+      <ColumnHeader columnTitle='Todos' />
+    </div>
   );
 }

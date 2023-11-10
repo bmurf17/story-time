@@ -1,9 +1,9 @@
-import Card from '../shared/Card';
+import ColumnHeader from './_ColumnHeader';
 
 export default function Modules() {
   return (
-    <>
-      <Card title={'Modules'} description={'All The modules'} img={''} alt={''} />
-    </>
+    <div className='flex flex-col'>
+      <ColumnHeader columnTitle='Modules' />
+    </div>
   );
 }
