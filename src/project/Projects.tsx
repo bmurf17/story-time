@@ -1,4 +1,4 @@
-import ActivityLog from './_ActivityLog';
+import ActivityLog from './activities/_ActivityLog';
 import Modules from './_Modules';
 import Todos from './_Todos';
 
