@@ -1,5 +1,5 @@
 import ActivityLog from './activities/_ActivityLog';
-import Modules from './_Modules';
+import Modules from './modules/_Modules';
 import Todos from './todo/_Todos';
 
 export default function Project() {
