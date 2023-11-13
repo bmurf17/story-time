@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nav from './Nav';
 import { routes } from './shared/Routes';
+import { modules } from './shared/types/Module';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
           <Routes>
             {routes.map((route) => {
               return <Route path={route.route} element={route.component} key={route.name} />;
+            })}
+            {modules.map((module) => {
+              return <Route path={module.link} element={module.page} key={module.name} />;
             })}
           </Routes>
         </main>
