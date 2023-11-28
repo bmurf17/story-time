@@ -7,7 +7,7 @@ export default function Modules() {
     <div className='flex flex-col gap-4'>
       <ColumnHeader columnTitle='Modules' />
       {modules.map((module) => {
-        return <ModuleItem module={module} />;
+        return <ModuleItem module={module} key={module.name} />;
       })}
     </div>
   );

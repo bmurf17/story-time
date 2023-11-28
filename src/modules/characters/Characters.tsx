@@ -8,7 +8,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function Example() {
+export default function Character() {
   const [categories] = useState({
     List: [
       {
@@ -112,8 +112,9 @@ export default function Example() {
                           description='Add a new Character'
                           title='Add a character'
                         />
-                        {posts.map(() => (
+                        {posts.map((post) => (
                           <Card
+                            key={post.id}
                             img='https://v1.tailwindcss.com/img/card-top.jpg'
                             alt='Sunset in the mountains'
                             description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.'

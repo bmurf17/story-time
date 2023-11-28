@@ -37,7 +37,7 @@ export default function Nav() {
                 <div className='hidden sm:ml-6 sm:block'>
                   <div className='flex space-x-4'>
                     {routes.map((item) => (
-                      <>
+                      <div key={item.name}>
                         {item.displayInNav ? (
                           <Link
                             key={item.name}
@@ -54,7 +54,7 @@ export default function Nav() {
                         ) : (
                           <></>
                         )}
-                      </>
+                      </div>
                     ))}
                   </div>
                 </div>
