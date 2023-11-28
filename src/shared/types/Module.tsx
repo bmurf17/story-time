@@ -8,13 +8,13 @@ import {
   faTimeline,
   faTree,
 } from '@fortawesome/free-solid-svg-icons';
-import Todo from '../../modules/todo/Todo';
 import Encyclopedia from '../../modules/encyclopedia/Encyclopedia';
 import Resources from '../../modules/resources/Resources';
 import KeyItems from '../../modules/keyItems/KeyItems';
 import Notes from '../../modules/notes/Notes';
 import Timeline from '../../modules/timeline/Timeline';
 import Organizations from '../../modules/organizations/Organizations';
+import Characters from '../../modules/characters/Characters';
 
 export interface Module {
   link: string;
@@ -26,11 +26,11 @@ export interface Module {
 
 export const modules: Module[] = [
   {
-    link: '/todo',
-    name: 'Todo',
+    link: '/character',
+    name: 'Characters',
     description: 'Keep all characters in your story',
     icon: <FontAwesomeIcon size='xl' icon={faUserGroup} />,
-    page: <Todo />,
+    page: <Characters />,
   },
   {
     link: '/encyclopedia',
