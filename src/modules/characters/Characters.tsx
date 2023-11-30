@@ -3,6 +3,7 @@ import { Tab } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAdd } from '@fortawesome/free-solid-svg-icons';
 import Card from '../../shared/Card';
+import { Link } from 'react-router-dom';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -78,12 +79,14 @@ export default function Character() {
               )}>
               {idx === 0 ? (
                 <ul>
-                  <li className='relative rounded-md p-3 hover:bg-gray-100'>
-                    <h3 className='text-md font-medium leading-5 text-blue-600'>
-                      <FontAwesomeIcon size='sm' className='mr-4' icon={faAdd} />
-                      Add A Character
-                    </h3>
-                  </li>
+                  <Link to={'/createCharacter'}>
+                    <li className='relative rounded-md p-3 hover:bg-gray-100 hover:cursor-pointer'>
+                      <h3 className='text-md font-medium leading-5 text-blue-600'>
+                        <FontAwesomeIcon size='sm' className='mr-4' icon={faAdd} />
+                        Add A Character
+                      </h3>
+                    </li>
+                  </Link>
                   {posts.map((post) => (
                     <li key={post.id} className='relative rounded-md p-3 hover:bg-gray-100'>
                       <h3 className='text-sm font-medium leading-5'>{post.title}</h3>
@@ -106,12 +109,14 @@ export default function Character() {
                   {idx === 1 ? (
                     <div className='relative rounded-md p-3 '>
                       <div className='grid grid-flow-row auto-rows-max grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4'>
-                        <Card
-                          img='https://v1.tailwindcss.com/img/card-top.jpg'
-                          alt='Sunset in the mountains'
-                          description='Add a new Character'
-                          title='Add a character'
-                        />
+                        <Link to={'/createCharacter'}>
+                          <Card
+                            img='https://v1.tailwindcss.com/img/card-top.jpg'
+                            alt='Sunset in the mountains'
+                            description='Add a new Character'
+                            title='Add a character'
+                          />
+                        </Link>
                         {posts.map((post) => (
                           <Card
                             key={post.id}

@@ -1,4 +1,5 @@
 import Home from '../home/Home';
+import CreateCharacter from '../modules/characters/CreateCharacter';
 import Project from '../project/Projects';
 
 export interface Route {
@@ -19,6 +20,12 @@ export const routes: Route[] = [
     name: 'Projects',
     route: '/project',
     component: <Project />,
+    displayInNav: false,
+  },
+  {
+    name: 'Create Character',
+    route: '/createCharacter',
+    component: <CreateCharacter />,
     displayInNav: false,
   },
 ];
