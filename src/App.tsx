@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Nav from './Nav';
+import Nav from './nav/Nav';
 import { routes } from './shared/Routes';
 import { modules } from './shared/types/Module';
 

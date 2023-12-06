@@ -1,9 +1,10 @@
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { classNames } from './shared/Utilities';
-import { routes } from './shared/Routes';
+import { classNames } from '../shared/Utilities';
+import { routes } from '../shared/Routes';
 import { Link, useLocation } from 'react-router-dom';
+import NavTodo from './NavTodo';
 
 export default function Nav() {
   const location = useLocation();
@@ -35,9 +36,9 @@ export default function Nav() {
                   />
                 </div>
                 <div className='hidden sm:ml-6 sm:block'>
-                  <div className='flex space-x-4'>
+                  <div className='flex space-x-2'>
                     {routes.map((item) => (
-                      <div key={item.name}>
+                      <div key={item.name} className='flex justify-center'>
                         {item.displayInNav ? (
                           <Link
                             key={item.name}
@@ -56,6 +57,7 @@ export default function Nav() {
                         )}
                       </div>
                     ))}
+                    <NavTodo />
                   </div>
                 </div>
               </div>
