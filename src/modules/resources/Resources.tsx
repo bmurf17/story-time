@@ -1,3 +1,3 @@
 export default function Resources() {
-  return <>Resources</>;
+  return <>To Do</>;
 }
