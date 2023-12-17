@@ -4,21 +4,11 @@ import { faAdd } from '@fortawesome/free-solid-svg-icons';
 
 import { Link } from 'react-router-dom';
 import Card from './Card';
+import { Categories } from './types/Categories';
+import { Post } from './types/Post';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
-}
-
-export interface Post {
-  id: number;
-  title: string;
-  date: string;
-}
-
-export interface Categories {
-  list: Post[];
-  grid: Post[];
-  map: Post[];
 }
 
 interface Props {

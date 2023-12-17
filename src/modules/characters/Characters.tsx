@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import TabViewOfObjects, { Categories } from '../../shared/TabViewOfObjects';
+import TabViewOfObjects from '../../shared/TabViewOfObjects';
+import { Categories } from '../../shared/types/Categories';
 
 const list = [
   {
