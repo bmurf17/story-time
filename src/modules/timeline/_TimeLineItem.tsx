@@ -6,7 +6,7 @@ interface Props {
 
 export default function TimelineItem({ timeLineItem }: Props) {
   return (
-    <div className='rounded overflow-hidden shadow-lg bg-slate-200 flex flex-col gap-2 p-4'>
+    <div className='w-full rounded  shadow-lg bg-slate-200 flex flex-col gap-2 p-4'>
       <span className='bg-red-400 flex justify-center '>{timeLineItem.category}</span>
 
       <div className='font-bold text-xl '>{timeLineItem.title}</div>
