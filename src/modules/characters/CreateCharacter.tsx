@@ -8,7 +8,7 @@ function classNames(...classes: string[]) {
 
 export default function CreateCharacter() {
   const [categories] = useState({
-    Recent: [
+    'Basic Info': [
       {
         id: 1,
         title: 'Does drinking coffee make you smarter?',
@@ -24,7 +24,7 @@ export default function CreateCharacter() {
         shareCount: 2,
       },
     ],
-    Popular: [
+    Connections: [
       {
         id: 1,
         title: 'Is tech making coffee better or worse?',
@@ -40,7 +40,7 @@ export default function CreateCharacter() {
         shareCount: 12,
       },
     ],
-    Trending: [
+    'Add A Tab +': [
       {
         id: 1,
         title: 'Ask Me Anything: 10 answers to your questions about coffee',
@@ -59,7 +59,7 @@ export default function CreateCharacter() {
   });
   const fields: Map<string, string> = new Map<string, string>([
     ['First Name', 'text'],
-    ['Pronous', 'text'],
+    ['Pronouns', 'text'],
     ['Species', 'text'],
     ['Occupation', 'text'],
     ['Height', 'text'],
