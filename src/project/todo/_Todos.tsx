@@ -1,5 +1,5 @@
 import { tempTodos } from '../../shared/types/Todo';
-import ColumnHeader from '../_ColumnHeader';
+import ColumnHeader from '../../shared/ColumnHeader';
 import { TodoItem } from './_TodoItem';
 
 export default function Todos() {

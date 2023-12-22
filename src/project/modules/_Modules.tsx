@@ -1,7 +1,6 @@
 import { modules } from '../../shared/types/Module';
-import ColumnHeader from '../_ColumnHeader';
+import ColumnHeader from '../../shared/ColumnHeader';
 import { ModuleItem } from './_ModuleItem';
-
 
 export default function Modules() {
   return (

@@ -1,4 +1,4 @@
-import ColumnHeader from '../_ColumnHeader';
+import ColumnHeader from '../../shared/ColumnHeader';
 import { tempActivities } from '../../shared/types/Activity';
 import { ActivityItem } from './_ActivityItem';
 

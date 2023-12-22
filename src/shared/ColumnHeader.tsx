@@ -20,7 +20,7 @@ export default function ColumnHeader({ columnTitle }: Props) {
   const [selectedPerson, setSelectedPerson] = useState(people[0]);
 
   return (
-    <h3 className=' text-2xl bg-slate-200 text-center p-4 font-bold rounded'>
+    <h3 className=' text-2xl bg-slate-300 text-center p-4 font-bold rounded'>
       {columnTitle}
       <div className='relative'>
         <Listbox value={selectedPerson} onChange={setSelectedPerson}>
