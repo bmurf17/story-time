@@ -1,6 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import ColumnHeader from '../../shared/ColumnHeader';
+import { SearchBar } from '../../shared/SearchBar';
 import { EncyclopediaItem } from './_EncyclopediaItem';
 
 const eItems = [
@@ -25,10 +24,7 @@ export default function Encyclopedia() {
   return (
     <div className='flex flex-col m-4 justify-center gap-4'>
       <div className='flex w-full'>
-        <div className='bg-white shadow-sm text-black w-full p-4'>
-          <FontAwesomeIcon className='mr-2 cursor-pointer' size='sm' icon={faSearch} />
-          Search Bar
-        </div>
+        <SearchBar />
       </div>
       <div className='flex justify-between md:flex-row flex-col gap-4  w-full'>
         <div className='flex flex-col gap-4 w-full justify-center'>
