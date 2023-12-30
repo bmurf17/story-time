@@ -1,5 +1,6 @@
 import Home from '../home/Home';
 import CreateCharacter from '../modules/characters/CreateCharacter';
+import TraverseOrganization from '../modules/organizations/_TraverseOrganization';
 import Project from '../project/Projects';
 
 export interface Route {
@@ -26,6 +27,12 @@ export const routes: Route[] = [
     name: 'Create Character',
     route: '/createCharacter',
     component: <CreateCharacter />,
+    displayInNav: false,
+  },
+  {
+    name: 'Traverse Organization',
+    route: '/traverseOrganization',
+    component: <TraverseOrganization />,
     displayInNav: false,
   },
 ];
