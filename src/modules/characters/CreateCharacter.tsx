@@ -6,57 +6,38 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
+interface Tabs {
+  name: string;
+  fields: { [key: string]: string }[];
+}
+
 export default function CreateCharacter() {
-  const [categories] = useState({
-    'Basic Info': [
-      {
-        id: 1,
-        title: 'Does drinking coffee make you smarter?',
-        date: '5h ago',
-        commentCount: 5,
-        shareCount: 2,
-      },
-      {
-        id: 2,
-        title: "So you've bought coffee... now what?",
-        date: '2h ago',
-        commentCount: 3,
-        shareCount: 2,
-      },
-    ],
-    Connections: [
-      {
-        id: 1,
-        title: 'Is tech making coffee better or worse?',
-        date: 'Jan 7',
-        commentCount: 29,
-        shareCount: 16,
-      },
-      {
-        id: 2,
-        title: 'The most innovative things happening in coffee',
-        date: 'Mar 19',
-        commentCount: 24,
-        shareCount: 12,
-      },
-    ],
-    'Add A Tab +': [
-      {
-        id: 1,
-        title: 'Ask Me Anything: 10 answers to your questions about coffee',
-        date: '2d ago',
-        commentCount: 9,
-        shareCount: 5,
-      },
-      {
-        id: 2,
-        title: "The worst advice we've ever heard about coffee",
-        date: '4d ago',
-        commentCount: 1,
-        shareCount: 2,
-      },
-    ],
-  });
+  const [categories] = useState<Tabs[]>([
+    {
+      name: 'Basic Info',
+      fields: [
+        { 'First Name': 'text' },
+        { Pronouns: 'text' },
+        { Species: 'text' },
+        { Occupation: 'text' },
+        { Height: 'text' },
+        { Weight: 'text' },
+        { Age: 'text' },
+      ],
+    },
+    {
+      name: 'Tab 2',
+      fields: [
+        { 'First Name': 'text' },
+        { Pronouns: 'text' },
+        { Species: 'text' },
+        { Occupation: 'text' },
+        { Height: 'text' },
+        { Weight: 'text' },
+        { Age: 'text' },
+      ],
+    },
+  ]);
   const fields: Map<string, string> = new Map<string, string>([
     ['First Name', 'text'],
     ['Pronouns', 'text'],
@@ -76,9 +57,9 @@ export default function CreateCharacter() {
         <div className='rounded overflow-hidden shadow-lg bg-slate-200 p-4'>
           <Tab.Group>
             <Tab.List className='flex space-x-1 rounded-xl bg-blue-900/20 p-1'>
-              {Object.keys(categories).map((category) => (
+              {categories.map((category) => (
                 <Tab
-                  key={category}
+                  key={category.name}
                   className={({ selected }) =>
                     classNames(
                       'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
@@ -88,41 +69,43 @@ export default function CreateCharacter() {
                         : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
                     )
                   }>
-                  {category}
+                  {category.name}
                 </Tab>
               ))}
             </Tab.List>
             <Tab.Panels className='mt-2'>
-              {Object.values(categories).map((posts, idx) => (
+              {categories.map((posts, idx) => (
                 <Tab.Panel
                   key={idx}
                   className={classNames(
                     'rounded-xl bg-white p-3',
-                    'ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2'
+                    ' focus:outline-none focus:ring-2'
                   )}>
-                  <ul>
-                    {posts.map((post) => (
-                      <li key={post.id} className='relative rounded-md p-3 hover:bg-gray-100'>
-                        <h3 className='text-sm font-medium leading-5'>{post.title}</h3>
-
-                        <ul className='mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500'>
-                          <li>{post.date}</li>
-                          <li>&middot;</li>
-                          <li>{post.commentCount} comments</li>
-                          <li>&middot;</li>
-                          <li>{post.shareCount} shares</li>
-                        </ul>
-
-                        <a
-                          href='#'
-                          className={classNames(
-                            'absolute inset-0 rounded-md',
-                            'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2'
-                          )}
-                        />
-                      </li>
-                    ))}
-                  </ul>
+                  <div className='grid grid-cols-2 gap-4'>
+                    {posts.fields.map((field) => {
+                      const [key, value] = Object.entries(field)[0];
+                      return (
+                        <div className='flex items-center'>
+                          <div className='md:w-1/3'>
+                            <label className='block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4'>
+                              {key}
+                            </label>
+                          </div>
+                          <div className='md:w-2/3'>
+                            <input
+                              className='appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500'
+                              id={key + value}
+                              type='text'
+                              defaultValue='Jane Doe'
+                            />
+                          </div>
+                        </div>
+                      );
+                    })}
+                    <div className='flex items-center justify-center text-blue-500 text-xl cursor-pointer'>
+                      + Add a Field
+                    </div>
+                  </div>
                 </Tab.Panel>
               ))}
             </Tab.Panels>
