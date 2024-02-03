@@ -9,14 +9,7 @@ export default function Timeline() {
         return (
           <div
             key={timeLineItem.title}
-            className={
-              index % 2 === 0 ? 'flex justify-start   pr-28 ' : ' flex justify-end   pl-28'
-            }>
-            {index % 2 === 0 ? (
-              <div className=' translate-y-14  md:translate-x-[559px] rotate-45 w-4 h-4 bg-slate-200 border-t border-r border-red-500'></div>
-            ) : (
-              <div className=' translate-y-14 translate-x-2 rotate-45 w-4 h-4 bg-slate-200 border-b border-l border-red-500'></div>
-            )}
+            className={index % 2 === 0 ? 'flex justify-start pr-28 ' : ' flex justify-end pl-28'}>
             <div className='w-1/2'>
               <TimelineItem timeLineItem={timeLineItem} />
             </div>
