@@ -2,6 +2,7 @@ import Home from '../home/Home';
 import CreateCharacter from '../modules/characters/CreateCharacter';
 import TraverseOrganization from '../modules/organizations/_TraverseOrganization';
 import Project from '../project/Projects';
+import CreateProject from '../project/createProject/CreateProject';
 
 export interface Route {
   name: string;
@@ -33,6 +34,12 @@ export const routes: Route[] = [
     name: 'Traverse Organization',
     route: '/traverseOrganization',
     component: <TraverseOrganization />,
+    displayInNav: false,
+  },
+  {
+    name: 'Create Project',
+    route: '/createProject',
+    component: <CreateProject />,
     displayInNav: false,
   },
 ];

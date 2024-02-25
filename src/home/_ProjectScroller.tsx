@@ -49,7 +49,7 @@ const ProjectScroller = () => {
 
   return (
     <div className='2xl:container 2xl:mx-auto 2xl:px-0 py-3 px-10'>
-      <div className='carousel my-12 mx-auto'>
+      <div className='carousel my-6 mx-auto'>
         <h2 className='text-4xl leading-8 font-semibold mb-12 text-slate-700'>Other Projects</h2>
         <div className='relative overflow-hidden'>
           <div className='flex justify-between absolute top left w-full h-full'>
