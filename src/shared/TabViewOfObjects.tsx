@@ -99,13 +99,13 @@ export default function TabViewOfObjects({ categories, createLink }: Props) {
                       {posts.map((post: any) => (
                         <div
                           key={post.id}
-                          className="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 flex-shrink-0"
+                          className="w-full sm:w-1/2 md:w-1/3 xl:w-1/4 flex-shrink-0 p-2"
                         >
                           <Card
-                            img="https://v1.tailwindcss.com/img/card-top.jpg"
+                            img={post.img}
                             alt="Sunset in the mountains"
-                            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
-                            title="The Coldest Sunset"
+                            description={post.description}
+                            title={post.title}
                           />
                         </div>
                       ))}
