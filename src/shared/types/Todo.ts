@@ -1,29 +1,29 @@
-import { BaseProjectModel } from './BaseType';
+import { BaseProjectModel } from "./BaseType";
 
 export interface Todo extends BaseProjectModel {
-    done: boolean;
-    description: string;
+  complete: boolean;
+  task: string;
 }
 
 export const tempTodos: Todo[] = [
-    {
-        createdBy: "Brendan Murphy",
-        createdDate: new Date(),
-        id: 1,
-        lastModifiedBy: "Brendan Murphy",
-        lastModifiedDate: new Date(),
-        projectId: 1,
-        done: true,
-        description: "First Todo"
-    },
-    {
-        createdBy: "Brendan Murphy",
-        createdDate: new Date(),
-        id: 2,
-        lastModifiedBy: "Brendan Murphy",
-        lastModifiedDate: new Date(),
-        projectId: 1,
-        done: false,
-        description: "Second Todo"
-    },
-]
+  {
+    createdBy: "Brendan Murphy",
+    createdAt: new Date(),
+    id: 1,
+    lastModifiedBy: "Brendan Murphy",
+    updatedAt: new Date(),
+    projectId: 1,
+    complete: true,
+    task: "First Todo",
+  },
+  {
+    createdBy: "Brendan Murphy",
+    createdAt: new Date(),
+    id: 2,
+    lastModifiedBy: "Brendan Murphy",
+    updatedAt: new Date(),
+    projectId: 1,
+    complete: false,
+    task: "Second Todo",
+  },
+];
