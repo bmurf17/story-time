@@ -72,7 +72,7 @@ export default function TabViewOfObjects({ categories, createLink }: Props) {
                       <li>{post.date}</li>
                     </ul>
                     <a
-                      href="#"
+                      href={`character/${post.id}`}
                       className={classNames(
                         "absolute inset-0 rounded-md",
                         "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"

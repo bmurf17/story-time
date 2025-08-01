@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUserGroup,
   faBook,
@@ -7,14 +7,14 @@ import {
   faNoteSticky,
   faTimeline,
   faTree,
-} from '@fortawesome/free-solid-svg-icons';
-import Encyclopedia from '../../modules/encyclopedia/Encyclopedia';
-import Resources from '../../modules/resources/Resources';
-import KeyItems from '../../modules/keyItems/KeyItems';
-import Notes from '../../modules/notes/Notes';
-import Timeline from '../../modules/timeline/Timeline';
-import Organizations from '../../modules/organizations/Organizations';
-import Characters from '../../modules/characters/Characters';
+} from "@fortawesome/free-solid-svg-icons";
+import Encyclopedia from "../../modules/encyclopedia/Encyclopedia";
+import Resources from "../../modules/resources/Resources";
+import KeyItems from "../../modules/keyItems/KeyItems";
+import Notes from "../../modules/notes/Notes";
+import Timeline from "../../modules/timeline/Timeline";
+import Organizations from "../../modules/organizations/Organizations";
+import Characters from "../../modules/characters/Characters";
 
 export interface Module {
   link: string;
@@ -26,52 +26,52 @@ export interface Module {
 
 export const modules: Module[] = [
   {
-    link: '/character',
-    name: 'Characters',
-    description: 'Keep all characters in your story',
-    icon: <FontAwesomeIcon size='xl' icon={faUserGroup} />,
+    link: "/characters",
+    name: "Characters",
+    description: "Keep all characters in your story",
+    icon: <FontAwesomeIcon size="xl" icon={faUserGroup} />,
     page: <Characters />,
   },
   {
-    link: '/encyclopedia',
-    name: 'Encyclopedia',
-    description: 'Houses all of your information',
-    icon: <FontAwesomeIcon size='xl' icon={faBook} />,
+    link: "/encyclopedia",
+    name: "Encyclopedia",
+    description: "Houses all of your information",
+    icon: <FontAwesomeIcon size="xl" icon={faBook} />,
     page: <Encyclopedia />,
   },
   {
-    link: '/resources',
-    name: 'Resources',
-    description: 'Upload all external resources',
-    icon: <FontAwesomeIcon size='xl' icon={faUpload} />,
+    link: "/resources",
+    name: "Resources",
+    description: "Upload all external resources",
+    icon: <FontAwesomeIcon size="xl" icon={faUpload} />,
     page: <Resources />,
   },
   {
-    link: '/key-items',
-    name: 'Key Items',
-    description: 'Keep track of all items in your story',
-    icon: <FontAwesomeIcon size='xl' icon={faKey} />,
+    link: "/key-items",
+    name: "Key Items",
+    description: "Keep track of all items in your story",
+    icon: <FontAwesomeIcon size="xl" icon={faKey} />,
     page: <KeyItems />,
   },
   {
-    link: '/notes',
-    name: 'Notes',
-    description: 'Just jot down some notes',
-    icon: <FontAwesomeIcon size='xl' icon={faNoteSticky} />,
+    link: "/notes",
+    name: "Notes",
+    description: "Just jot down some notes",
+    icon: <FontAwesomeIcon size="xl" icon={faNoteSticky} />,
     page: <Notes />,
   },
   {
-    link: '/timeline',
-    name: 'Timeline',
-    description: 'Keep track of the order',
-    icon: <FontAwesomeIcon size='xl' icon={faTimeline} />,
+    link: "/timeline",
+    name: "Timeline",
+    description: "Keep track of the order",
+    icon: <FontAwesomeIcon size="xl" icon={faTimeline} />,
     page: <Timeline />,
   },
   {
-    link: '/organizations',
-    name: 'Organizations',
-    description: 'Any hierarchical groups',
-    icon: <FontAwesomeIcon size='xl' icon={faTree} />,
+    link: "/organizations",
+    name: "Organizations",
+    description: "Any hierarchical groups",
+    icon: <FontAwesomeIcon size="xl" icon={faTree} />,
     page: <Organizations />,
   },
 ];

@@ -1,7 +1,5 @@
-import { Post } from './Post';
-
 export interface Categories {
-  list: Post[];
-  grid: Post[];
-  map: Post[];
+  "List View": any[];
+  "Grid View": any[];
+  "Map View": any[];
 }

@@ -3,6 +3,7 @@ import Nav from "./nav/Nav";
 import { routes } from "./shared/Routes";
 import { modules } from "./shared/types/Module";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import CreateCharacter from "./modules/characters/CreateCharacter";
 
 function App() {
   const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ function App() {
                   />
                 );
               })}
+              <Route path="character/:charId" element={<CreateCharacter />} />
             </Routes>
           </main>
         </BrowserRouter>

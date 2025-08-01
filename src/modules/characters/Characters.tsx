@@ -50,9 +50,9 @@ export default function Character() {
   const transformedCharacters = characters.map(transformCharacterToPost);
 
   const categories: Categories = {
-    list: transformedCharacters,
-    grid: transformedCharacters,
-    map: transformedCharacters,
+    "List View": transformedCharacters,
+    "Grid View": transformedCharacters,
+    "Map View": transformedCharacters,
   };
 
   if (isLoading) {
