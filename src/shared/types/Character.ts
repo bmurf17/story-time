@@ -29,6 +29,8 @@ interface BasicInfo {
   height: string;
   weight: string;
   age: string;
+  class: string;
+  level: number;
 }
 
 interface Skills {

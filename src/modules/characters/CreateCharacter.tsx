@@ -48,7 +48,7 @@ export default function CreateCharacter() {
       Constitution: 10,
     },
     customFields: {},
-    img: "",
+    img: "https://preview.redd.it/somebody-help-i-cant-stop-drawing-fabian-aramais-seacaster-v0-eod5jztt4erd1.jpeg?auto=webp&s=f071c6f022d6d093c89be09b0b659c17b3dc52c7",
   });
 
   const {
@@ -127,6 +127,8 @@ export default function CreateCharacter() {
           { Height: "text" },
           { Weight: "text" },
           { Age: "text" },
+          { Level: "number" },
+          { Class: "text" },
         ],
       },
       {
@@ -170,7 +172,9 @@ export default function CreateCharacter() {
           if (
             lowerCaseName === "name" ||
             fieldName.toLowerCase() === "species" ||
-            fieldName.toLowerCase() === "occupation"
+            fieldName.toLowerCase() === "occupation" ||
+            fieldName.toLowerCase() === "class" ||
+            fieldName.toLowerCase() === "level"
           ) {
             fields.set(fieldName, fieldType);
           }
@@ -293,6 +297,8 @@ export default function CreateCharacter() {
           height: formData.basicInfo.Height,
           weight: formData.basicInfo.Weight,
           age: formData.basicInfo.Age,
+          class: formData.basicInfo.Class,
+          level: +formData.basicInfo.level,
         },
         skills: {
           dexterity: formData.skills.Dexterity,
